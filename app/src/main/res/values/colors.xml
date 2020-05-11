@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFEFF0F4</color>
+    <color name="colorPrimaryDark">#FFEFF0F4</color>
+    <color name="colorAccent">#FF2196F3</color>
+    <color name="colorTabItem0">#FF4081</color>
+    <color name="colorTabITem1">#F44336</color>
+    <color name="colorBackgroundColor">#FFEFF0F4</color>
+    <color name="colorSvg">#444444</color>
+    <color name="colorCodeString">#005995</color>
+    <color name="colorCodeVariable">#FF5A09</color>
+    <color name="colorCodeKeyword">#1F9792</color>
+    <color name="colorCodeComment">#747E80</color>
+    <color name="colorCodeNumber">#63B931</color>
+    <color name="transparent_gray">#90000000</color>
+</resources>

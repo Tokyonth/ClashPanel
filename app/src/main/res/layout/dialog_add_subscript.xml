@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="22dp"
+    android:gravity="center">
+
+    <TextView
+        android:text="选择一个你喜欢的颜色"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <RadioGroup
+            android:id="@+id/rg_subscription_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sub_color0"
+                android:buttonTint="#F44336"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color1"
+                android:buttonTint="#FF4081"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color2"
+                android:buttonTint="#9C27B0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color3"
+                android:buttonTint="#9C27B0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color4"
+                android:buttonTint="#3F51B5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color5"
+                android:buttonTint="#4CAF50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color6"
+                android:buttonTint="#795548"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/sub_color7"
+                android:buttonTint="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="@color/colorAccent"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入名字\备注"
+            android:singleLine="true"
+
+            android:textSize="14sp"
+            android:imeOptions="actionDone"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/edit_subscription_name"
+            app:boxBackgroundMode="outline" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="@color/colorAccent"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入订阅链接"
+            android:singleLine="true"
+
+            android:textSize="14sp"
+            android:imeOptions="actionDone"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/edit_subscription_url"
+            app:boxBackgroundMode="outline" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

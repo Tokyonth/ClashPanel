@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="欢迎下载Clash for Magisk同作者Kr328开发的Clash for Android，完成后可直接安装使用，您无需再使用本App。"/>
+
+    <TextView
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击确定后将为你跳转到GitHub的下载页，你也可以自行百度ClashAndroid选择更快的下载方式。"/>
+
+</LinearLayout>

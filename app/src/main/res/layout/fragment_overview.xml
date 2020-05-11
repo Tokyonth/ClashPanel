@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cdl_overview_main"
+    android:background="#FF5252">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/ll_overview_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center|top">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/ic_cat_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:text="Clash Overview"/>
+
+            <TextView
+                android:id="@+id/tv_run_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginTop="18dp"
+                android:text="00 : 00 : 00"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:text="Running..."/>
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_in_operation_status" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_bottom_tab"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="400dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center|top">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/markview_shape_corner_white"/>
+
+            <LinearLayout
+                android:background="@drawable/markview_shape_corner_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:gravity="center|start"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@mipmap/ic_launcher_round"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:paddingTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="布丁 - 12(Point)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="香港通用1 - (230ms)"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_now_delay_test"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.tokyonth.clashpanel.view.BurnRoundView
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:id="@+id/brv_start"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        app:burnColor="#7C4DFF"
+                        app:burnSrc="@drawable/ic_clash_start"
+                        app:isBurn="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"
+                        android:text="启 动"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.tokyonth.clashpanel.view.BurnRoundView
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:id="@+id/brv_stop"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        app:burnColor="#FF5252"
+                        app:burnSrc="@drawable/ic_clash_stop"
+                        app:isBurn="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"
+                        android:text="停 止"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.tokyonth.clashpanel.view.BurnRoundView
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:id="@+id/brv_restart"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        app:burnColor="#E91E63"
+                        app:burnSrc="@drawable/ic_clash_reboot"
+                        app:isBurn="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"
+                        android:text="重 启"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.tokyonth.clashpanel.view.BurnRoundView
+                        android:id="@+id/brv_kill"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        app:burnColor="#E040FB"
+                        app:burnSrc="@drawable/ic_kill_clash"
+                        app:isBurn="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="6dp"
+                        android:text="杀 死"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"
+                android:text="节点列表"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
